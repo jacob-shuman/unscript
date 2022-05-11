@@ -71,14 +71,8 @@ export const findScript = async (
   return filteredScripts[0];
 };
 
-export const runScript = (script: ShortScript, path: string) => {
-  console.info(
-    `Converted ${chalk.blueBright(script.short)} -> ${chalk.blueBright(
-      script.name
-    )}`
-  );
-
-  sync("npm", ["run", script.name], {
+export const runScript = (script: string, path: string) => {
+  sync("npm", ["run", script], {
     stdio: "inherit",
     cwd: normalize(path),
   });
