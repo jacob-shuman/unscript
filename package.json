@@ -1,7 +1,7 @@
 {
   "name": "unscript",
   "version": "1.0.0",
-  "description": "Run npm scripts using shorthands",
+  "description": "Run npm scripts using automatically shortened script names",
   "author": "Jacob Shuman",
   "license": "MIT",
   "main": "./dist/index.js",
