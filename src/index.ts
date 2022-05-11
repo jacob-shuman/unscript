@@ -10,7 +10,6 @@ import {
   runScript,
   shortenScriptNames,
 } from "./helpers";
-import { delimiter } from "path";
 import prompts from "prompts";
 
 program
