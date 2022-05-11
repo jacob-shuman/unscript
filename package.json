@@ -1,0 +1,44 @@
+{
+  "name": "unscript",
+  "version": "1.0.0",
+  "description": "Run npm scripts using shorthands",
+  "author": "Jacob Shuman",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "bin": {
+    "unscript": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "ncc build ./src/index.ts -w -o dist/",
+    "build": "ncc build ./src/index.ts -o dist/",
+    "prerelease": "rimraf ./dist/",
+    "release": "ncc build ./src/index.ts -o ./dist/ --minify --no-cache --no-source-map-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacob-shuman/unscript"
+  },
+  "keywords": [
+    "script",
+    "alias"
+  ],
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.2",
+    "@types/node": "^17.0.31",
+    "@types/prompts": "^2.0.14",
+    "@vercel/ncc": "^0.33.4",
+    "chalk": "^5.0.1",
+    "commander": "^9.2.0",
+    "cross-spawn": "^7.0.3",
+    "prompts": "^2.4.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "engines": {
+    "node": ">=14.19.2"
+  },
+  "dependencies": {}
+}
