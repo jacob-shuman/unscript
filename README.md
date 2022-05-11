@@ -6,15 +6,28 @@
  ▀▀▀   ▀▀ █▪   ▀▀▀▀   ·▀▀▀   .▀  ▀  ▀▀▀  .▀       ▀▀▀
 ```
 
-_**Run npm scripts using shorthands**_
+_**Run npm scripts using automatically shortened script names**_
 
-Unscript lets you run npm scripts using shorthands generated from the names of scripts in your `package.json`. Unscript creates shorthands by combining the first letter of each word separated by a delimiter (`:` by default).
+```bash
+unscript [options] [query]
+```
+
+Unscript lets you query and run npm scripts from a list of shorthands. These shorthands are generated from the names of the scripts in your `package.json`. Unscript creates shorthands by combining the first letter of each word separated by a delimiter (`:` by default).
 
 For example:
 
 - `dev` would be shortened to `d`.
 - `build:dev` would be shortened to `bd`.
-- `lint:watch` would be shortened to `lw`.
+- `lint:watch:dev` would be shortened to `lwd`.
+
+If there are at least 2 identical shorthands then a prompt will appear to ask which of the results should be run.
+
+For example:
+
+- `build:dev` would be shortened to `bd`.
+- `build:deploy` would also be shortened to `bd`.
+
+If no query is passed then a list of all scripts in the `package.json` will be displayed.
 
 ## Options
 
