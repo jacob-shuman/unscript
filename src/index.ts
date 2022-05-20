@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-import { Argument, program } from "commander";
+import { program } from "commander";
 import chalk from "chalk";
 import packageJson from "../package.json";
-
 import {
   findScript,
   getScripts,
