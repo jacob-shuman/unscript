@@ -17,6 +17,8 @@ _**Run npm scripts using automatically shortened script names**_
 unscript [options] [query]
 ```
 
+
+## What is unscript?
 Unscript lets you query and run npm scripts from a list of shorthands. These shorthands are generated from the names of the scripts in your `package.json`. Unscript creates shorthands by combining the first letter of each word separated by a delimiter (`:` by default).
 
 For example:
@@ -33,6 +35,9 @@ For example:
 - `build:deploy` would also be shortened to `bd`.
 
 If no query is passed then a list of all scripts in the `package.json` will be displayed.
+
+## Why was this made?
+There are many existing tools on npm that can run javascript files easily as a drop-in replacement for package.json scripts. Although these are helpful utilities I found that I wanted to create many small package.json scripts that I wouldn't need a full javascript file for. Unscript was created out of my own personal desire to quick run npm scripts using automatically generated shortened names.
 
 ## Options
 
