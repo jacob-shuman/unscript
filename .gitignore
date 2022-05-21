@@ -20,3 +20,6 @@ typings/
 .eslintcache
 
 dist
+
+# Misc files
+.DS_Store
