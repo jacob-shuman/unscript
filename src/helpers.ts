@@ -28,6 +28,20 @@ export const getScripts = (path: string): Scripts => {
   return scripts;
 };
 
+export const displayScripts = (scripts: Scripts, delimiter: string) => {
+  const shorthandScripts: Record<string, string> = Object.entries(
+    scripts
+  ).reduce(
+    (acc, [k, v]) => ({
+      ...acc,
+      [`${k} (${shortenScriptName(k, delimiter)})`]: v,
+    }),
+    {}
+  );
+
+  console.log(shorthandScripts);
+};
+
 export const shortenScriptName = (
   scriptName: string,
   delimiter: string

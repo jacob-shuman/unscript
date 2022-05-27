@@ -4,8 +4,9 @@ import { program } from "commander";
 import chalk from "chalk";
 import packageJson from "../package.json";
 import {
-  findScript,
   getScripts,
+  displayScripts,
+  findScript,
   runScript,
   shortenScriptNames,
 } from "./helpers";
@@ -18,7 +19,11 @@ program
   .option("-p, --path <path>", "Path to folder containing package.json.", ".")
   .option("-d, --delimiter <delim>", "Character to separate words by.", ":")
   .option("-a, --auto", "Run the selected script without confirmation.", false)
-  .option("-s, --scripts", "Display scripts in found package.json.", false)
+  .option(
+    "-s, --scripts",
+    "Display scripts and shorthands in found package.json.",
+    false
+  )
   .action(
     async (
       query: string,
@@ -34,7 +39,7 @@ program
         const scripts = getScripts(options.path);
 
         if (options.scripts) {
-          console.log(scripts);
+          displayScripts(scripts, options.delimiter);
           process.exit(0);
         }
 
