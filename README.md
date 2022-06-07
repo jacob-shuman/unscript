@@ -6,10 +6,15 @@
  ▀▀▀   ▀▀ █▪   ▀▀▀▀   ·▀▀▀   .▀  ▀  ▀▀▀  .▀       ▀▀▀
 ```
 
+
 ![example usage](examples/full.svg)
+
 
 [![NPM Version](https://img.shields.io/npm/v/unscript?style=flat)]()
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
+
+<a href="https://www.producthunt.com/posts/unscript?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-unscript" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=348724&theme=light" alt="Unscript - Run&#0032;npm&#0032;scripts&#0032;using&#0032;automatically&#0032;shortened&#0032;script&#0032;names | Product Hunt" style="width: 200px;" width="250" height="54" /></a>
 
 _**Run npm scripts using automatically shortened script names**_
 
